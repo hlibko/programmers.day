@@ -24,6 +24,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .container {
@@ -57,25 +58,28 @@ header {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
+    max-width: 100vw;
     background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
     z-index: -1;
     pointer-events: none;
 }
 
 h1 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(2rem, 5vw, 4.5rem);
     font-weight: 800;
     background: linear-gradient(135deg, var(--text-color) 0%, var(--accent-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
+    padding: 0 1rem;
 }
 
 .subtitle {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     color: #94a3b8;
     margin-bottom: 3rem;
+    padding: 0 1rem;
 }
 
 /* Countdown Styles */
@@ -107,7 +111,7 @@ h1 {
 
 .number {
     font-family: var(--font-mono);
-    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-size: clamp(2rem, 4vw, 4rem);
     font-weight: 700;
     color: var(--accent-color);
     line-height: 1;
@@ -193,6 +197,14 @@ footer {
     }
 
     .time-unit {
+        padding: 1rem;
+    }
+
+    .number {
+        font-size: 2rem;
+    }
+
+    .glass-card {
         padding: 1.5rem;
     }
 }
