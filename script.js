@@ -10,13 +10,13 @@ function getProgrammersDay(year) {
     const day = isLeapYear(year) ? 12 : 13;
     // Date(year, monthIndex, day, hours, minutes, seconds)
     // 12:00:00 AM start of the day
-    return new Date(year, 8, day, 0, 0, 0); 
+    return new Date(year, 8, day, 0, 0, 0);
 }
 
 function updateCountdown() {
     const now = new Date();
     const currentYear = now.getFullYear();
-    
+
     let targetDate = getProgrammersDay(currentYear);
 
     // If the holiday has already passed this year, look to next year
@@ -57,3 +57,16 @@ updateCountdown();
 
 // Update every second
 setInterval(updateCountdown, 1000);
+
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+            .then((registration) => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch((err) => {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+    });
+}
