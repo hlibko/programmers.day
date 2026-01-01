@@ -56,7 +56,7 @@ function updateCountdown() {
 updateCountdown();
 
 // Update every second
-setInterval(updateCountdown, 1000);
+setInterval(() => updateCountdown(), 1000);
 
 // Register Service Worker
 if ('serviceWorker' in navigator) {
