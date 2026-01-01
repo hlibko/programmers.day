@@ -209,6 +209,37 @@ footer {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Install Button */
+.install-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+}
+
+.install-btn:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+.install-btn[hidden] {
+    display: none;
 }
