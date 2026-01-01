@@ -1,0 +1,19 @@
+{
+    "name": "Programmer's Day",
+    "short_name": "Progr.Day",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "type": "image/svg+xml",
+            "sizes": "any"
+        },
+        {
+            "src": "icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "theme_color": "#0f172a",
+    "background_color": "#0f172a",
+    "display": "standalone"
+}
