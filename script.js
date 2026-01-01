@@ -43,6 +43,13 @@ function updateCountdown() {
     if (yearSpan && yearSpan.textContent !== String(currentYear)) {
         yearSpan.textContent = currentYear;
     }
+
+    // Update Date Display
+    const dateDisplay = document.getElementById('target-date');
+    if (dateDisplay) {
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateDisplay.textContent = targetDate.toLocaleDateString('en-US', options);
+    }
 }
 
 // Initial call

@@ -196,3 +196,19 @@ footer {
         padding: 1.5rem;
     }
 }
+
+/* Date Display */
+.date-display {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--secondary-accent);
+    margin-bottom: 2rem;
+    font-family: var(--font-mono);
+    text-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
